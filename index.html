@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceView графигі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header  class="site-header">
+        <div class="header-container">
+            <!-- Логотип -->
+            <div class="logo">
+               <h1>PriceView</h1>
+            </div>
+    
+            <!-- Навигация -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/rates">Курсы</a></li>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                </ul>
+            </nav>
+    
+            
+        </div>
+    </header>
+    
+    <div style="background-color: white;" class="container">
+        <h1 style="text-align: center;">PriceView графиг</h1>
+        <!-- TradingView Widget -->
+        <div class="tradingview-widget-container">
+            <div id="tradingview_chart"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "width": "100%",
+                    "height": "500",
+                    "symbol": "NASDAQ:AAPL", // График символы (мысалы, Apple акциясы)
+                    "interval": "D", // Уақыт аралығы (D - күнтізбелік)
+                    "timezone": "Etc/UTC",
+                    "theme": "light", // Тема (light немесе dark)
+                    "style": "1", // График стилі
+                    "locale": "en", // Тіл
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_chart"
+                });
+            </script>
+        </div>
+    </div>
+    <div class="container2">
+        <h1>Обменник валют</h1>
+        <div " class="converter">
+            <input type="number" id="amount" placeholder="Сумма" min="0">
+            <select id="fromCurrency"></select>
+            <span>→</span>
+            <select id="toCurrency"></select>
+            <button id="convertBtn">Конвертировать</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Секция с контактами -->
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+                    <li><a href="mailto:info@exchange.com">info@exchange.com</a></li>
+                    <li>Адрес: г. Москва, ул. Обменная, д. 12</li>
+                </ul>
+            </div>
+    
+            <!-- Секция с полезными ссылками -->
+            <div class="footer-section">
+                <h4>Полезные ссылки</h4>
+                <ul>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/rates">Курсы валют</a></li>
+                    <li><a href="/faq">Часто задаваемые вопросы</a></li>
+                    <li><a href="/blog">Блог</a></li>
+                </ul>
+            </div>
+    
+            <!-- Секция с социальными сетями -->
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <ul class="social-links">
+                    <li><a href="https://vk.com/exchange" target="_blank">VK</a></li>
+                    <li><a href="https://t.me/exchange" target="_blank">Telegram</a></li>
+                    <li><a href="https://instagram.com/exchange" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com/exchange" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+    
+            <!-- Секция с информацией о компании -->
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мы предоставляем услуги обмена валют с 2010 года. Надежность, выгодные курсы и быстрое обслуживание — наши главные приоритеты.</p>
+            </div>
+        </div>
+    
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom">
+            <p>&copy; 2023 Обменник валют. Все права защищены.</p>
+            <p><a href="/privacy-policy">Политика конфиденциальности</a> | <a href="/terms-of-use">Пользовательское соглашение</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
